@@ -1,9 +1,13 @@
 {
   "channelUrl": "https://www.youtube.com/@PhilisAlosa",
-  "videos": [
-    { "title": "Algebraic Expressions — full lesson", "youtubeId": "REPLACE_WITH_VIDEO_ID_1", "course": "MAT101" },
-    { "title": "Cell Structure explained simply", "youtubeId": "REPLACE_WITH_VIDEO_ID_2", "course": "BIO201" },
-    { "title": "How to write a strong essay", "youtubeId": "REPLACE_WITH_VIDEO_ID_3", "course": "ENG110" },
-    { "title": "Chemical Bonding in 10 minutes", "youtubeId": "REPLACE_WITH_VIDEO_ID_4", "course": "CHEM301" }
+"videos": [
+    { "title": "Linear Algebra — cauchy schwarz inequality", "youtubeId": "MH_wVa5nTtQ", "course": "MAT201" },
+    { "title": "Angle between two vectors", "youtubeId": "LE6BCfBeWu4", "course": "MAT201" },
+    { "title": "Norm of a vector", "youtubeId": "VlPmhE-4zVw", "course": "MAT201" },
+    { "title": "DOT PRODUCT AND CROSS PRODUCT", "youtubeId": "5gKzdECbNfs", "course": "MAT 201" },
+
+    { "title": "GRAM SCHMIDT PROCESS EXPLAINED", "youtubeId": "fNEvzpiXF0A", "course": "MAT 201" },
+    { "title": "SCALAR PROJECTION EXPLAINED!", "youtubeId": "g2GoYkUVlHM", "course": "MAT 201" },
+    { "title": "Vector Arithmetic", "youtubeId": "QodEVO5BPvo"", "course": "MAT 201" }
   ]
 }
