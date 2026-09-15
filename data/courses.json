@@ -1,0 +1,35 @@
+[
+  {
+    "code": "MAT101",
+    "name": "Mathematics — Form 1",
+    "notes": [
+      { "title": "Algebraic Expressions", "date": "2026-01-12", "file": "notes/mat101-algebraic-expressions.pdf" },
+      { "title": "Linear Equations", "date": "2026-02-20", "file": "notes/mat101-linear-equations.pdf" },
+      { "title": "Quadratic Equations", "date": "2026-06-03", "file": "notes/mat101-quadratic-equations.pdf" }
+    ]
+  },
+  {
+    "code": "BIO201",
+    "name": "Biology — Form 2",
+    "notes": [
+      { "title": "Cell Structure and Function", "date": "2026-01-20", "file": "notes/bio201-cell-structure.pdf" },
+      { "title": "Classification of Living Things", "date": "2026-03-15", "file": "notes/bio201-classification.pdf" }
+    ]
+  },
+  {
+    "code": "ENG110",
+    "name": "English — Form 1",
+    "notes": [
+      { "title": "Grammar Essentials", "date": "2026-02-01", "file": "notes/eng110-grammar-essentials.pdf" },
+      { "title": "Essay Writing Techniques", "date": "2026-08-25", "file": "notes/eng110-essay-writing.pdf" }
+    ]
+  },
+  {
+    "code": "CHEM301",
+    "name": "Chemistry — Form 3",
+    "notes": [
+      { "title": "Periodic Table Trends", "date": "2026-04-10", "file": "notes/chem301-periodic-table.pdf" },
+      { "title": "Chemical Bonding", "date": "2026-09-01", "file": "notes/chem301-chemical-bonding.pdf" }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "channelUrl": "https://www.youtube.com/@REPLACE_WITH_CHANNEL_HANDLE",
+  "videos": [
+    { "title": "Algebraic Expressions — full lesson", "youtubeId": "REPLACE_WITH_VIDEO_ID_1", "course": "MAT101" },
+    { "title": "Cell Structure explained simply", "youtubeId": "REPLACE_WITH_VIDEO_ID_2", "course": "BIO201" },
+    { "title": "How to write a strong essay", "youtubeId": "REPLACE_WITH_VIDEO_ID_3", "course": "ENG110" },
+    { "title": "Chemical Bonding in 10 minutes", "youtubeId": "REPLACE_WITH_VIDEO_ID_4", "course": "CHEM301" }
+  ]
+}
