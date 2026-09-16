@@ -1,13 +1,280 @@
 {
   "channelUrl": "https://www.youtube.com/@PhilisAlosa",
-"videos": [
-    { "title": "Linear Algebra — cauchy schwarz inequality", "youtubeId": "MH_wVa5nTtQ", "course": "MAT201" },
-    { "title": "Angle between two vectors", "youtubeId": "LE6BCfBeWu4", "course": "MAT201" },
-    { "title": "Norm of a vector", "youtubeId": "VlPmhE-4zVw", "course": "MAT201" },
-    { "title": "DOT PRODUCT AND CROSS PRODUCT", "youtubeId": "5gKzdECbNfs", "course": "MAT 201" },
-
-    { "title": "GRAM SCHMIDT PROCESS EXPLAINED", "youtubeId": "fNEvzpiXF0A", "course": "MAT 201" },
-    { "title": "SCALAR PROJECTION EXPLAINED!", "youtubeId": "g2GoYkUVlHM", "course": "MAT 201" },
-    { "title": "Vector Arithmetic", "youtubeId": "QodEVO5BPvo", "course": "MAT 201" }
+  "videos": [
+    {
+      "title": "Linear Algebra — cauchy schwarz inequality",
+      "youtubeId": "MH_wVa5nTtQ",
+      "course": "MAT201"
+    },
+    {
+      "title": "Angle between two vectors",
+      "youtubeId": "LE6BCfBeWu4",
+      "course": "MAT201"
+    },
+    {
+      "title": "Norm of a vector",
+      "youtubeId": "VlPmhE-4zVw",
+      "course": "MAT201"
+    },
+    {
+      "title": "DOT PRODUCT AND CROSS PRODUCT",
+      "youtubeId": "5gKzdECbNfs",
+      "course": "MAT201"
+    },
+    {
+      "title": "GRAM SCHMIDT PROCESS EXPLAINED",
+      "youtubeId": "5gKzdECbNfs",
+      "course": "MAT201"
+    },
+    {
+      "title": "SCALAR PROJECTION EXPLAINED!",
+      "youtubeId": "5gKzdECbNfs",
+      "course": "MAT201"
+    },
+    {
+      "title": "Vector Arithmetic",
+      "youtubeId": "5gKzdECbNfs",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "ckrj8GF-jfw",
+      "title": "Inner product",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "fNEvzpiXF0A",
+      "title": "GRAM SCHMIDT PROCESS EXPLAINED",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "g2GoYkUVlHM",
+      "title": "SCALAR PROJECTION EXPLAINED!",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "QodEVO5BPvo",
+      "title": "Vector Arithmetic",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "Ak30NbqS96k",
+      "title": "surface area of solids-application of integration",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "hxsLNrEtLD0",
+      "title": "Volume of solids-application of integration",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "9bLyw1ZYb2w",
+      "title": "Mean value theorem-application of integration",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "yJnqq8kNP-g",
+      "title": "integration by substitution part 2",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "8FSxmoKtRTE",
+      "title": "Integration by substitution part 1",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "zIHPkdA1yho",
+      "title": "matrix of transformations",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "PCnNLGFJYaw",
+      "title": "quadratic forms",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "JiHTHNxyD-8",
+      "title": "quadratic forms example 2",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "w8Xe2YkLG3g",
+      "title": "integration by parts",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "bGDlygDN7D0",
+      "title": "orthogonal diagonalization of matrices part 1",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "EZW8MApXp30",
+      "title": "Example on integration by partial fraction",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "5_XRqgilfIc",
+      "title": "Set theory-Laws of set theory",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "eYF4QE842-Y",
+      "title": "EXAMPLE ON INTEGRATION BY PARTS",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "7mZfnv5xQY4",
+      "title": "D'ALEMBERT'S RATIO TEST FOR CONVERGENCE",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "4tVQ3u4rPUw",
+      "title": "series of powers of natural numbers",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "65h6tbjuxH8",
+      "title": "set theory part 3",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "Bz56fvLNhqg",
+      "title": "set theory part 2",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "79EQimNe6Ak",
+      "title": "Set Theory Part 1",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "9SW_LUwsAzs",
+      "title": "complex numbers",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "icMPZM__s5Q",
+      "title": "improper integrals",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "GtTPjfjIrsQ",
+      "title": "hyperbolic function",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "cnvTANVCfmo",
+      "title": "minimal polynomial",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "V-8cUdzb1LY",
+      "title": "cayley hamilton thm",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "XUecVcROFis",
+      "title": "loss and discount",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "UO98kYZLKcA",
+      "title": "Profit",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "Tk29PHDg5G8",
+      "title": "Conversion of currency",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "crHqr-EaaYw",
+      "title": "Gauss Jacobi Iterative scheme",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "TQPucLObqdQ",
+      "title": "Gauss Jacobi Iterative method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "1B2AhMY6ha0",
+      "title": "LU Decomposition method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "XeM9cqeGJ8U",
+      "title": "Newton Raphson continuation",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "Y8FzhgGewmk",
+      "title": "Newton Raphson Method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "wW7dge_uBS4",
+      "title": "Finding the inverse of a matrix using cofactor method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "vFzC8dwasMs",
+      "title": "Finding the inverse of a matrix using gaussian method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "J03brE5kAfM",
+      "title": "solving 3 by 3 matrix using gaussian-Jordan elimination method",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "K3_2DbHOLrc",
+      "title": "solving system of linear equations using crammers rule",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "xk1on6SU2Ac",
+      "title": "Application of set theory",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "ZGirIX9op00",
+      "title": "integration using partial fractions",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "mWJKuc2yp7o",
+      "title": "Eigenvalues and Eigenvectors part B",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "MvkhNpdxV44",
+      "title": "Eigenvalues and Eigenvectors of a 3x3 Matrix Part A",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "gK46vyuzV2Q",
+      "title": "Reduction formula explained",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "7wW6QkiwgVk",
+      "title": "Integration by parts explained!",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "Ky5_lPIn5Ck",
+      "title": "Partial fractions explained",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "rnocx9m0c-Q",
+      "title": "Getting the Legth of an Arc",
+      "course": "MAT201"
+    },
+    {
+      "youtubeId": "exzJGjWp6jw",
+      "title": "implicit differentiation",
+      "course": "MAT201"
+    }
   ]
 }
