@@ -195,8 +195,6 @@
         '<div class="video-title">' + video.title + "</div>";
       row.appendChild(a);
     });
-        row.appendChild(a);
-    });
 
     var searchInput = document.getElementById("video-search");
     var emptyEl = document.getElementById("videos-empty");
