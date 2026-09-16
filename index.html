@@ -95,9 +95,16 @@
         <p>Same subjects, walked through out loud. New uploads land on the channel first.</p>
       </div>
 
+      <label class="search-field video-search-field">
+  <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  <input type="search" id="video-search" placeholder="Search videos by subject or course code…" aria-label="Search videos by subject or course code">
+</label>
+
       <div class="video-row" id="video-row">
         <!-- filled by script.js -->
       </div>
+
+      <p class="empty-state" id="videos-empty" hidden>No videos match that search yet — try a different word, or check back soon.</p>
 
       <a id="channel-link" class="btn btn-primary channel-cta" href="#" target="_blank" rel="noopener">
         Subscribe on YouTube
