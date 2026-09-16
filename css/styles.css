@@ -197,7 +197,7 @@ h1{ font-size:clamp(2.2rem, 4.4vw, 3.4rem); letter-spacing:-.01em; }
   border:none; background:none; outline:none; font-family:inherit;
   font-size:.9rem; width:100%; color:var(--ink);
 }
-
+.video-search-field{ max-width:340px; margin-bottom:28px; }
 .course-group{
   border-left:3px solid var(--green);
   padding:8px 0 8px 24px;
