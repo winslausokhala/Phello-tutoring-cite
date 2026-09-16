@@ -187,12 +187,31 @@
       a.href = watchUrl;
       a.target = "_blank";
       a.rel = "noopener";
+      a.dataset.search = ((video.title || "") + " " + (video.course || "")).toLowerCase();
       a.innerHTML =
         '<div class="video-thumb"><img src="' + thumbUrl + '" alt="" loading="lazy" ' +
         'onerror="this.src=\'' + placeholderThumb + '\'"></div>' +
         '<div class="video-course">' + (video.course || "") + "</div>" +
         '<div class="video-title">' + video.title + "</div>";
       row.appendChild(a);
+    });
+        row.appendChild(a);
+    });
+
+    var searchInput = document.getElementById("video-search");
+    var emptyEl = document.getElementById("videos-empty");
+
+    searchInput.addEventListener("input", function () {
+      var query = searchInput.value.trim().toLowerCase();
+      var anyVisible = false;
+
+      row.querySelectorAll(".video-card").forEach(function (card) {
+        var visible = !query || card.dataset.search.indexOf(query) !== -1;
+        card.hidden = !visible;
+        if (visible) anyVisible = true;
+      });
+
+      emptyEl.hidden = anyVisible;
     });
   }
 
