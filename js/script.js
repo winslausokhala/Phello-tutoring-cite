@@ -39,6 +39,136 @@
     '<path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' +
     "</svg>";
 
+  var previewIcon =
+    '<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>' +
+    '<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>' +
+    "</svg>";
+
+  var noteTypeIcon =
+    '<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<path d="M6 3h9l4 4v14H6V3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>' +
+    '<path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' +
+    "</svg>";
+
+  var videoTypeIcon =
+    '<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+    '<circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>' +
+    '<path d="M10 8.5l6 3.5-6 3.5v-7z" fill="currentColor"/>' +
+    "</svg>";
+
+  /* ---------- pdf preview modal ---------- */
+  var pdfModal = document.getElementById("pdf-modal");
+  var pdfFrame = document.getElementById("pdf-modal-frame");
+  var pdfTitle = document.getElementById("pdf-modal-title");
+  var pdfDownload = document.getElementById("pdf-modal-download");
+  var pdfNewTab = document.getElementById("pdf-modal-newtab");
+  var pdfClose = document.getElementById("pdf-modal-close");
+  var pdfBackdrop = document.getElementById("pdf-modal-backdrop");
+  var lastFocusedEl = null;
+
+  function openPdfPreview(file, title) {
+    lastFocusedEl = document.activeElement;
+    pdfTitle.textContent = title;
+    pdfFrame.src = file;
+    pdfDownload.href = file;
+    pdfNewTab.href = file;
+    pdfModal.hidden = false;
+    document.body.style.overflow = "hidden";
+    pdfClose.focus();
+  }
+
+  function closePdfPreview() {
+    pdfModal.hidden = true;
+    pdfFrame.src = "";
+    document.body.style.overflow = "";
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
+
+  pdfClose.addEventListener("click", closePdfPreview);
+  pdfBackdrop.addEventListener("click", closePdfPreview);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !pdfModal.hidden) closePdfPreview();
+  });
+
+  /* ---------- latest-on-the-shelf (hero) ---------- */
+  function renderLatestShelf(courses, videosData) {
+    var boardList = document.getElementById("latest-list");
+
+    // Most recent notes (dated, so this sort is exact)
+    var noteItems = [];
+    courses.forEach(function (course) {
+      course.notes.forEach(function (note) {
+        noteItems.push({
+          type: "note",
+          course: course.code,
+          title: note.title,
+          date: note.date,
+          onOpen: function () { openPdfPreview(note.file, course.code + " — " + note.title); }
+        });
+      });
+    });
+    noteItems.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+
+    // Most recent videos. Videos may not have a "date" yet (older entries) -
+    // those fall back to the start of time and simply keep their original
+    // file order rather than being treated as more recent than they are.
+    var videoItems = (videosData.videos || []).map(function (video) {
+      var hasRealId = video.youtubeId && video.youtubeId.indexOf("REPLACE") !== 0;
+      var watchUrl = hasRealId
+        ? "https://www.youtube.com/watch?v=" + video.youtubeId
+        : videosData.channelUrl;
+      return {
+        type: "video",
+        course: video.course || "",
+        title: video.title,
+        date: video.date || null,
+        href: watchUrl
+      };
+    });
+    videoItems.sort(function (a, b) {
+      var da = a.date ? new Date(a.date) : new Date(0);
+      var db = b.date ? new Date(b.date) : new Date(0);
+      return db - da;
+    });
+
+    // Take the most recent of each so videos are always represented,
+    // then interleave everything by date for the final display order.
+    var combined = noteItems.slice(0, 4).concat(videoItems.slice(0, 4));
+    combined.sort(function (a, b) {
+      var da = a.date ? new Date(a.date) : new Date(0);
+      var db = b.date ? new Date(b.date) : new Date(0);
+      return db - da;
+    });
+
+    combined.forEach(function (item) {
+      var li = document.createElement("li");
+      var isVideo = item.type === "video";
+
+      var el = document.createElement(isVideo ? "a" : "button");
+      el.className = "board-item";
+      if (isVideo) {
+        el.href = item.href;
+        el.target = "_blank";
+        el.rel = "noopener";
+      } else {
+        el.type = "button";
+        el.addEventListener("click", item.onOpen);
+      }
+
+      el.innerHTML =
+        '<span class="board-main">' +
+        (isVideo ? videoTypeIcon : noteTypeIcon) +
+        (item.course ? '<span class="board-course">' + item.course + "</span>" : "") +
+        '<span class="board-title">' + item.title + "</span>" +
+        "</span>" +
+        '<span class="board-date">' + (item.date ? formatDate(item.date) : "") + "</span>";
+
+      li.appendChild(el);
+      boardList.appendChild(li);
+    });
+  }
+
   /* ---------- notes ---------- */
   function renderNotes(courses) {
     var groupsEl = document.getElementById("course-groups");
@@ -86,35 +216,30 @@
           (isRecent(note.date) ? '<span class="note-new">New</span>' : "");
         row.appendChild(info);
 
+        var actions = document.createElement("div");
+        actions.className = "note-actions";
+
+        var previewBtn = document.createElement("button");
+        previewBtn.type = "button";
+        previewBtn.className = "note-preview";
+        previewBtn.innerHTML = previewIcon + "<span>Preview</span>";
+        previewBtn.addEventListener("click", function () {
+          openPdfPreview(note.file, course.code + " — " + note.title);
+        });
+        actions.appendChild(previewBtn);
+
         var link = document.createElement("a");
         link.className = "note-download";
         link.href = note.file;
         link.setAttribute("download", "");
         link.innerHTML = downloadIcon + "<span>Download PDF</span>";
-        row.appendChild(link);
+        actions.appendChild(link);
 
+        row.appendChild(actions);
         group.appendChild(row);
       });
 
       groupsEl.appendChild(group);
-    });
-
-    // latest-notes board on the hero
-    var allNotes = [];
-    courses.forEach(function (course) {
-      course.notes.forEach(function (note) {
-        allNotes.push({ course: course.code, title: note.title, date: note.date, file: note.file });
-      });
-    });
-    allNotes.sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
-
-    var boardList = document.getElementById("latest-list");
-    allNotes.slice(0, 4).forEach(function (note) {
-      var li = document.createElement("li");
-      li.innerHTML =
-        '<span><span class="board-course">' + note.course + "</span>" + note.title + "</span>" +
-        '<span class="board-date">' + formatDate(note.date) + "</span>";
-      boardList.appendChild(li);
     });
 
     // filtering (course pill + search combined)
@@ -221,6 +346,7 @@
     .then(function (results) {
       renderNotes(results[0]);
       renderVideos(results[1]);
+      renderLatestShelf(results[0], results[1]);
     })
     .catch(function (err) {
       console.error("Could not load site content:", err);

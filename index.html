@@ -9,6 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
 
@@ -86,6 +91,24 @@
       <p class="empty-state" id="notes-empty" hidden>No notes match that search yet — try a different word, or check back soon.</p>
     </div>
   </section>
+
+  <!-- PDF PREVIEW MODAL (reused for every note) -->
+  <div class="pdf-modal" id="pdf-modal" hidden>
+    <div class="pdf-modal-backdrop" id="pdf-modal-backdrop"></div>
+    <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title">
+      <div class="pdf-modal-head">
+        <span id="pdf-modal-title">Note preview</span>
+        <button type="button" class="pdf-modal-close" id="pdf-modal-close" aria-label="Close preview">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <iframe id="pdf-modal-frame" class="pdf-modal-frame" title="PDF preview"></iframe>
+      <div class="pdf-modal-foot">
+        <a id="pdf-modal-download" class="btn btn-primary" download>Download PDF</a>
+        <a id="pdf-modal-newtab" class="btn btn-ghost" target="_blank" rel="noopener">Open in new tab</a>
+      </div>
+    </div>
+  </div>
 
   <!-- VIDEOS -->
   <section class="section section-alt" id="videos">
