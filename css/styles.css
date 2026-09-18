@@ -262,6 +262,7 @@ h1{ font-size:clamp(2.2rem, 4.4vw, 3.4rem); letter-spacing:-.01em; }
   display:flex; align-items:center; justify-content:center;
   padding:24px;
 }
+.pdf-modal[hidden]{ display:none; }
 .pdf-modal-backdrop{
   position:absolute; inset:0;
   background:rgba(22,36,30,.65);
