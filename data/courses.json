@@ -9,7 +9,7 @@
     ]
   },
   {
-    "code": "BIO201",
+    "code": "MAT102",
     "name": "Biology — Form 2",
     "notes": [
       { "title": "Cell Structure and Function", "date": "2026-01-20", "file": "notes/bio201-cell-structure.pdf" },
@@ -17,7 +17,7 @@
     ]
   },
   {
-    "code": "ENG110",
+    "code": "MAT201",
     "name": "English — Form 1",
     "notes": [
       { "title": "Grammar Essentials", "date": "2026-02-01", "file": "notes/eng110-grammar-essentials.pdf" },
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "code": "CHEM301",
+    "code": "MAT202",
     "name": "Chemistry — Form 3",
     "notes": [
       { "title": "Periodic Table Trends", "date": "2026-04-10", "file": "notes/chem301-periodic-table.pdf" },
